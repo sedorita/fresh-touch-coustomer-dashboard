@@ -1,607 +1,584 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Portal | Scrub & Klean Homes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Fresh Touch Client Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="client-portal.css" />
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
-      <div class="sidebar-brand">
-        <span class="brand-logo-wrap">
-          <img src="logo.png" alt="Scrub & Klean Homes - Client Portal" class="brand-logo">
-        </span>
+  <div class="portal-shell">
+    <header class="portal-topbar">
+      <div class="portal-brand">
+        <div class="portal-brand__mark">FT</div>
+        <div>
+          <div class="portal-brand__name">Fresh Touch Cleaning</div>
+          <div class="portal-brand__sub">Client Portal Preview</div>
+        </div>
       </div>
-      <nav class="sidebar-nav">
-        <a href="#" class="nav-item nav-item--active" data-page="overview" aria-current="page">
-          <span class="nav-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-          </span>
-          Overview
-        </a>
-        <a href="#" class="nav-item" data-page="add-ons">
-          <span class="nav-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </span>
-          Add-Ons
-        </a>
-        <a href="#" class="nav-item" data-page="emergency">
-          <span class="nav-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </span>
-          Emergency Cleaning
-        </a>
-        <a href="#" class="nav-item" data-page="history">
-          <span class="nav-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </span>
-          History
-        </a>
-        <a href="#" class="nav-item" data-page="security">
-          <span class="nav-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </span>
-          Security
-        </a>
+
+      <button
+        class="portal-menu-btn"
+        id="portalMenuBtn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="portalTabs"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="portal-tabs" id="portalTabs" aria-label="Client portal sections">
+        <button class="portal-tab is-active" data-panel="home" type="button">Home</button>
+        <button class="portal-tab" data-panel="visits" type="button">Visits</button>
+        <button class="portal-tab" data-panel="home-profile" type="button">My Home</button>
+        <button class="portal-tab" data-panel="billing" type="button">Billing</button>
+        <button class="portal-tab" data-panel="messages" type="button">Messages</button>
+        <button class="portal-tab" data-panel="account" type="button">Account</button>
       </nav>
-      <div class="sidebar-footer">
-        <a href="#" class="nav-item nav-item--logout">Logout</a>
+
+      <div class="portal-user">
+        <div class="portal-user__meta">
+          <div class="portal-user__label">Client</div>
+          <div class="portal-user__name">Sarah Mitchell</div>
+        </div>
+        <div class="portal-user__avatar">SM</div>
       </div>
-    </aside>
+    </header>
 
-    <div class="main-wrap">
-      <header class="main-header">
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="menu-toggle-bar"></span>
-          <span class="menu-toggle-bar"></span>
-          <span class="menu-toggle-bar"></span>
-        </button>
-        <h1 class="page-title" id="pageTitle">Overview</h1>
-        <div class="header-meta">
-          <span class="user-label">Logged in as <strong>Ebenezer Ayomide</strong></span>
-          <span class="badge badge--client">Client</span>
-        </div>
-      </header>
+    <main class="portal-main">
+      <section class="portal-hero">
+        <div class="portal-hero__content">
+          <div class="eyebrow">Next visit confirmed</div>
+          <h1 class="portal-hero__title">Your home care, all in one place.</h1>
+          <p class="portal-hero__text">
+            Review your next cleaning, update home notes, message the team,
+            and keep invoices and visit history in one calm, simple space.
+          </p>
 
-      <main class="main-content">
-        <!-- PAGE: Overview -->
-        <div class="page-panel is-active" id="panel-overview" data-page="overview" role="main">
-          <section class="stats-grid" aria-label="Service summary">
-            <article class="stat-card stat-card--deep">
-              <h2 class="stat-card__title">Deep Cleaning</h2>
-              <p class="stat-card__value">$249.00</p>
-              <p class="stat-card__sub">Your custom price</p>
-            </article>
-            <article class="stat-card stat-card--maintenance">
-              <h2 class="stat-card__title">Maintenance</h2>
-              <p class="stat-card__value">$179.00</p>
-              <p class="stat-card__sub">Recurring plan</p>
-            </article>
-            <article class="stat-card stat-card--next">
-              <h2 class="stat-card__title">Next Cleaning</h2>
-              <p class="stat-card__value">Mar 22, 2026</p>
-              <p class="stat-card__sub">Scheduled date</p>
-            </article>
-          </section>
-
-          <section class="journey-section card">
-            <div class="journey-header">
-              <h2 class="journey-title">
-                <span class="journey-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-                </span>
-                Your Journey
-              </h2>
-              <a href="#" class="btn btn--primary" id="ctaGettingStarted">Getting Started</a>
-            </div>
-            <ul class="journey-list" role="list">
-              <li class="journey-step journey-step--done">
-                <span class="journey-step__bullet" aria-hidden="true"></span>
-                <span class="journey-step__label">Free Home Assessment</span>
-                <span class="journey-step__check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              </li>
-              <li class="journey-step journey-step--done">
-                <span class="journey-step__bullet" aria-hidden="true"></span>
-                <span class="journey-step__label">Quote Received</span>
-                <span class="journey-step__check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-              </li>
-              <li class="journey-step">
-                <span class="journey-step__bullet" aria-hidden="true"></span>
-                <span class="journey-step__label">Deep Cleaning Confirmed</span>
-                <span class="journey-step__check" aria-hidden="true"></span>
-              </li>
-              <li class="journey-step">
-                <span class="journey-step__bullet" aria-hidden="true"></span>
-                <span class="journey-step__label">Deep Cleaning Completed</span>
-                <span class="journey-step__check" aria-hidden="true"></span>
-              </li>
-              <li class="journey-step">
-                <span class="journey-step__bullet" aria-hidden="true"></span>
-                <span class="journey-step__label">Recurring Plan Active</span>
-                <span class="journey-step__check" aria-hidden="true"></span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="info-card card card--info" role="status">
-            <span class="info-card__icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            </span>
-            <p>Our team will confirm your payment and schedule your deep cleaning. Add-ons and recurring maintenance unlock after your deep cleaning is complete.</p>
-          </section>
-        </div>
-
-        <!-- PAGE: Add-Ons -->
-        <div class="page-panel" id="panel-add-ons" data-page="add-ons" role="main" aria-hidden="true">
-          <section class="section-header">
-            <h2 class="section-title">Additional Services</h2>
-            <p class="section-desc">Enhance your cleaning with these add-ons. Select the services you want to include.</p>
-          </section>
-          <div class="addons-grid" id="addonsGrid">
-            <label class="addon-card" data-addon="laundry">
-              <input type="checkbox" class="addon-card__input" name="addon" value="laundry">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Laundry & Fold</span>
-                <span class="addon-card__price">+$45</span>
-                <span class="addon-card__tag addon-card__tag--popular">Popular</span>
-              </span>
-            </label>
-            <label class="addon-card" data-addon="windows">
-              <input type="checkbox" class="addon-card__input" name="addon" value="windows">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Window & Tracks</span>
-                <span class="addon-card__price">+$35</span>
-              </span>
-            </label>
-            <label class="addon-card" data-addon="inside-fridge">
-              <input type="checkbox" class="addon-card__input" name="addon" value="inside-fridge">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Inside Fridge</span>
-                <span class="addon-card__price">+$40</span>
-                <span class="addon-card__tag addon-card__tag--popular">Popular</span>
-              </span>
-            </label>
-            <label class="addon-card" data-addon="inside-oven">
-              <input type="checkbox" class="addon-card__input" name="addon" value="inside-oven">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Inside Oven</span>
-                <span class="addon-card__price">+$40</span>
-              </span>
-            </label>
-            <label class="addon-card" data-addon="inside-cabinets">
-              <input type="checkbox" class="addon-card__input" name="addon" value="inside-cabinets">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Inside Cabinets</span>
-                <span class="addon-card__price">+$55</span>
-              </span>
-            </label>
-            <label class="addon-card" data-addon="basement">
-              <input type="checkbox" class="addon-card__input" name="addon" value="basement">
-              <span class="addon-card__box">
-                <span class="addon-card__title">Finished Basement</span>
-                <span class="addon-card__price">+$60</span>
-              </span>
-            </label>
-          </div>
-          <div class="addons-actions">
-            <p class="addons-summary" id="addonsSummary">No add-ons selected</p>
-            <button type="button" class="btn btn--primary" id="addonsSave">Save Selection</button>
-          </div>
-        </div>
-
-        <!-- PAGE: Emergency Cleaning -->
-        <div class="page-panel" id="panel-emergency" data-page="emergency" role="main" aria-hidden="true">
-          <section class="emergency-hero card">
-            <div class="emergency-hero__content">
-              <h2 class="emergency-hero__title">24/7 Emergency Cleaning</h2>
-              <p class="emergency-hero__text">Need urgent cleaning? We respond within 2–4 hours. Available around the clock for spills, move-out rushes, or last-minute needs.</p>
-              <ul class="emergency-features">
-                <li><span class="emergency-features__dot"></span> Response within 2–4 hours</li>
-                <li><span class="emergency-features__dot"></span> Same-day scheduling when possible</li>
-                <li><span class="emergency-features__dot"></span> Transparent pricing before booking</li>
-              </ul>
-            </div>
-            <div class="emergency-hero__badge">
-              <span class="emergency-badge">24/7</span>
-              <span class="emergency-badge-label">Available</span>
-            </div>
-          </section>
-          <section class="card emergency-form-section">
-            <h2 class="section-title">Request Emergency Service</h2>
-            <form class="form emergency-form" id="emergencyForm" novalidate>
-              <div class="form-row">
-                <label class="form-group">
-                  <span class="form-label">Service type</span>
-                  <select class="form-input" name="service_type" required>
-                    <option value="">Select type</option>
-                    <option value="spill">Spill / Stain emergency</option>
-                    <option value="move">Move-out rush</option>
-                    <option value="guest">Guest / event prep</option>
-                    <option value="other">Other</option>
-                  </select>
-                </label>
-                <label class="form-group">
-                  <span class="form-label">Preferred date & time</span>
-                  <input type="datetime-local" class="form-input" name="preferred_datetime" required>
-                </label>
+          <div class="portal-hero__visit">
+            <div class="hero-visit-card">
+              <div class="hero-visit-card__top">
+                <div>
+                  <div class="hero-visit-card__label">Upcoming service</div>
+                  <div class="hero-visit-card__title">Deep Cleaning • 3 Bed / 2 Bath</div>
+                </div>
+                <span class="status-pill status-pill--warm">Confirmed</span>
               </div>
-              <label class="form-group">
-                <span class="form-label">Address (if different from account)</span>
-                <input type="text" class="form-input" name="address" placeholder="Same as account">
-              </label>
-              <label class="form-group">
-                <span class="form-label">Details</span>
-                <textarea class="form-input form-textarea" name="details" rows="4" placeholder="Describe what you need..."></textarea>
-              </label>
-              <div class="form-actions">
-                <button type="submit" class="btn btn--primary">Submit Request</button>
-              </div>
-            </form>
-          </section>
-        </div>
 
-        <!-- PAGE: History -->
-        <div class="page-panel" id="panel-history" data-page="history" role="main" aria-hidden="true">
-          <section class="section-header">
-            <h2 class="section-title">Service History</h2>
-            <p class="section-desc">Past and upcoming appointments.</p>
-          </section>
-          <div class="card card--table-wrap">
-            <div class="table-responsive">
-              <table class="data-table" id="historyTable">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Service</th>
-                    <th>Add-ons</th>
-                    <th>Status</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody id="historyTableBody">
-                  <!-- Rows rendered by script from transaction history -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <section class="card upcoming-card" id="upcomingCard">
-            <h2 class="section-title">Next Appointment</h2>
-            <div class="upcoming-detail" id="upcomingDetail">
-              <p class="upcoming-date" id="upcomingDate">—</p>
-              <p class="upcoming-service" id="upcomingService">—</p>
-              <div class="upcoming-actions">
-                <button type="button" class="btn btn--outline" id="btnReschedule">Reschedule</button>
-                <button type="button" class="btn btn--outline btn--danger" id="btnCancelAppointment">Cancel appointment</button>
+              <div class="hero-visit-card__grid">
+                <div class="hero-stat">
+                  <div class="hero-stat__label">Date</div>
+                  <div class="hero-stat__value">Tuesday, April 14</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat__label">Arrival window</div>
+                  <div class="hero-stat__value">10:00 AM – 12:00 PM</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat__label">Home</div>
+                  <div class="hero-stat__value">18 Westhill Crescent</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat__label">Team note</div>
+                  <div class="hero-stat__value">Kitchen + showers are priority</div>
+                </div>
+              </div>
+
+              <div class="hero-visit-card__actions">
+                <button class="btn btn--solid" type="button" id="confirmVisitBtn">
+                  Confirm details
+                </button>
+                <button class="btn btn--ghost" type="button" id="requestChangeBtn">
+                  Request change
+                </button>
+                <button class="btn btn--text" type="button" data-panel-target="messages">
+                  Message team
+                </button>
               </div>
             </div>
-            <p class="upcoming-empty" id="upcomingEmpty" style="display: none;">No upcoming appointments.</p>
-          </section>
+          </div>
         </div>
 
-        <!-- PAGE: Reschedule -->
-        <div class="page-panel" id="panel-reschedule" data-page="reschedule" role="main" aria-hidden="true">
-          <div class="flow-nav">
-            <a href="#" class="flow-nav__back" id="rescheduleBackToHistory">Back to History</a>
-          </div>
-          <section class="section-header">
-            <h2 class="section-title">Reschedule Appointment</h2>
-            <p class="section-desc">Choose a new date and time for your appointment.</p>
-          </section>
-          <div class="card reschedule-current" id="rescheduleCurrentSummary">
-            <h3 class="reschedule-current__title">Current appointment</h3>
-            <p class="reschedule-current__date" id="rescheduleCurrentDate">—</p>
-            <p class="reschedule-current__service" id="rescheduleCurrentService">—</p>
-          </div>
-          <section class="card">
-            <label class="form-group">
-              <span class="form-label">New date and time</span>
-              <input type="datetime-local" class="form-input" id="rescheduleNewDateTime" required>
-            </label>
-            <div class="reschedule-actions">
-              <button type="button" class="btn btn--primary" id="btnConfirmReschedule">Confirm reschedule</button>
+        <aside class="portal-hero__side">
+          <div class="summary-card summary-card--plan">
+            <div class="summary-card__label">Plan</div>
+            <div class="summary-card__title">Biweekly home reset</div>
+            <p class="summary-card__text">
+              You’re on a recurring plan. Need to pause, add extras, or update access notes?
+              You can request changes before your next visit.
+            </p>
+            <div class="summary-card__chips">
+              <span class="mini-chip">Recurring</span>
+              <span class="mini-chip">Supplies included</span>
+              <span class="mini-chip">Priority kitchen</span>
             </div>
-          </section>
-        </div>
+          </div>
 
-        <!-- PAGE: Security -->
-        <div class="page-panel" id="panel-security" data-page="security" role="main" aria-hidden="true">
-          <section class="section-header">
-            <h2 class="section-title">Account Security</h2>
-            <p class="section-desc">Manage password, two-factor authentication, and notifications.</p>
-          </section>
+          <div class="summary-card">
+            <div class="summary-card__label">Billing snapshot</div>
+            <div class="summary-card__price">$212.00</div>
+            <p class="summary-card__text">
+              Next invoice is scheduled after service completion. Card ending in 1842 is saved on file.
+            </p>
+            <button class="btn btn--outline btn--full" type="button" data-panel-target="billing">
+              View billing
+            </button>
+          </div>
+        </aside>
+      </section>
 
-          <section class="card security-block">
-            <h3 class="security-block__title">Password</h3>
-            <p class="security-block__desc">Change your password regularly to keep your account secure.</p>
-            <button type="button" class="btn btn--primary" id="btnChangePassword">Change Password</button>
-          </section>
-
-          <section class="card security-block security-block--2fa" id="security2faBlock">
-            <div class="security-block__row">
+      <section class="portal-panel is-active" id="panel-home" data-panel>
+        <div class="panel-grid panel-grid--home">
+          <article class="card card--wide">
+            <div class="card__top">
               <div>
-                <h3 class="security-block__title">Two-Factor Authentication (2FA)</h3>
-                <p class="security-block__desc">Connect with Google Authenticator for an extra layer of security.</p>
+                <div class="card__eyebrow">Next steps</div>
+                <h2 class="card__title">What we need before arrival</h2>
               </div>
-              <label class="toggle" aria-label="Enable two-factor authentication">
-                <input type="checkbox" class="toggle__input" id="toggle2fa">
-                <span class="toggle__track"></span>
-                <span class="toggle__thumb"></span>
+              <span class="status-pill status-pill--soft">2 items pending</span>
+            </div>
+
+            <div class="checklist">
+              <label class="check-row">
+                <input type="checkbox" checked />
+                <span>Entry note confirmed for side door keypad access.</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" />
+                <span>Confirm whether inside fridge is included this visit.</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" />
+                <span>Let us know whether the guest room should be skipped this week.</span>
               </label>
             </div>
-            <div class="twofa-setup" id="twofaSetup" aria-hidden="true">
-              <p class="twofa-setup__intro">Add this account to Google Authenticator using one of the methods below.</p>
-              <div class="twofa-methods">
-                <div class="twofa-method twofa-method--scan">
-                  <h4 class="twofa-method__title">Scan barcode</h4>
-                  <p class="twofa-method__desc">Open Google Authenticator and scan this QR code.</p>
-                  <div class="twofa-qr-wrap">
-                    <img id="twofaQrImage" src="" alt="QR code for Google Authenticator" class="twofa-qr" width="200" height="200">
-                  </div>
-                </div>
-                <div class="twofa-method twofa-method--key">
-                  <h4 class="twofa-method__title">Enter key manually</h4>
-                  <p class="twofa-method__desc">Can’t scan? Enter this key in Google Authenticator.</p>
-                  <div class="twofa-secret-wrap">
-                    <code class="twofa-secret" id="twofaSecretKey">———— ———— ————</code>
-                    <button type="button" class="btn btn--outline btn--sm" id="twofaCopyKey">Copy key</button>
-                  </div>
-                </div>
-              </div>
-              <div class="twofa-verify">
-                <label class="form-group">
-                  <span class="form-label">Enter the 6-digit code from Google Authenticator</span>
-                  <input type="text" class="form-input twofa-code-input" id="twofaVerifyCode" placeholder="000000" maxlength="6" pattern="[0-9]*" inputmode="numeric" autocomplete="one-time-code">
-                </label>
-                <button type="button" class="btn btn--primary" id="twofaVerifyBtn">Verify and enable 2FA</button>
-              </div>
-            </div>
-            <div class="twofa-enabled" id="twofaEnabled" aria-hidden="true">
-              <p class="twofa-enabled__text">Two-factor authentication is enabled. Your account is protected with Google Authenticator.</p>
-            </div>
-          </section>
 
-          <section class="card security-block">
-            <h3 class="security-block__title">Login Activity</h3>
-            <p class="security-block__desc">Recent sign-ins to your account.</p>
-            <ul class="activity-list" id="activityList">
-              <li class="activity-item">
-                <span class="activity-item__device">Chrome on Windows</span>
-                <span class="activity-item__meta">Winnipeg, MB · Mar 14, 2026</span>
-                <span class="activity-item__current">Current session</span>
-              </li>
-              <li class="activity-item">
-                <span class="activity-item__device">Safari on iPhone</span>
-                <span class="activity-item__meta">Winnipeg, MB · Mar 12, 2026</span>
-              </li>
+            <div class="card__actions">
+              <button class="btn btn--ghost" type="button" id="updateHomeNotesBtn">
+                Update home notes
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Home profile</div>
+            <h2 class="card__title">Access & preferences</h2>
+            <ul class="detail-list">
+              <li><strong>Entry:</strong> Keypad + side door</li>
+              <li><strong>Pets:</strong> One small dog (friendly)</li>
+              <li><strong>Products:</strong> Fragrance-light preferred</li>
+              <li><strong>Focus area:</strong> Kitchen, showers, baseboards</li>
             </ul>
-          </section>
+          </article>
 
-          <section class="card security-block">
-            <h3 class="security-block__title">Notification Preferences</h3>
-            <p class="security-block__desc">Choose how you want to be notified about your bookings.</p>
-            <ul class="settings-list">
-              <li class="settings-item">
-                <span class="settings-item__label">Email for automatic booking notifications</span>
-                <label class="toggle" aria-label="Email booking notifications">
-                  <input type="checkbox" class="toggle__input" id="toggleEmail" checked>
-                  <span class="toggle__track"></span>
-                  <span class="toggle__thumb"></span>
-                </label>
-              </li>
-              <li class="settings-item settings-item--sms">
-                <div class="settings-item__main">
-                  <span class="settings-item__label">SMS for booking reminders</span>
-                  <label class="toggle" aria-label="SMS booking reminders">
-                    <input type="checkbox" class="toggle__input" id="toggleSms">
-                    <span class="toggle__track"></span>
-                    <span class="toggle__thumb"></span>
-                  </label>
+          <article class="card">
+            <div class="card__eyebrow">Visit summary</div>
+            <h2 class="card__title">Last completed clean</h2>
+            <div class="visit-summary">
+              <div class="visit-summary__date">March 30 • General Cleaning</div>
+              <p class="visit-summary__text">
+                Team completed kitchen, bathrooms, dusting, vacuuming, and floor mopping.
+                Client note mentioned improved bathroom glass finish.
+              </p>
+              <button class="btn btn--text" type="button" data-panel-target="visits">
+                View visit history
+              </button>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <div class="card__top">
+              <div>
+                <div class="card__eyebrow">Included this visit</div>
+                <h2 class="card__title">Planned service scope</h2>
+              </div>
+              <button class="btn btn--outline" type="button" id="addExtraBtn">
+                Add an extra
+              </button>
+            </div>
+
+            <div class="scope-grid">
+              <div class="scope-block">
+                <div class="scope-block__title">Kitchen</div>
+                <ul>
+                  <li>Counters + backsplash</li>
+                  <li>Exterior cabinet wipe</li>
+                  <li>Sink + faucet polish</li>
+                  <li>Floor vacuum + mop</li>
+                </ul>
+              </div>
+
+              <div class="scope-block">
+                <div class="scope-block__title">Bathrooms</div>
+                <ul>
+                  <li>Toilet + sink sanitize</li>
+                  <li>Shower glass attention</li>
+                  <li>Mirror finish</li>
+                  <li>Floor detail clean</li>
+                </ul>
+              </div>
+
+              <div class="scope-block">
+                <div class="scope-block__title">Living areas</div>
+                <ul>
+                  <li>Dust reachable surfaces</li>
+                  <li>Vacuum rugs</li>
+                  <li>Baseboard spot detail</li>
+                  <li>High-touch wipe-down</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Help</div>
+            <h2 class="card__title">Need something changed?</h2>
+            <p class="card__text">
+              Message us if you want to adjust timing, add a room, or let us know about a new concern before the visit.
+            </p>
+            <div class="stack-actions">
+              <button class="btn btn--solid btn--full" type="button" data-panel-target="messages">
+                Open messages
+              </button>
+              <button class="btn btn--ghost btn--full" type="button" id="rushRequestBtn">
+                Request rush cleaning
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="portal-panel" id="panel-visits" data-panel aria-hidden="true">
+        <div class="panel-grid">
+          <article class="card card--wide">
+            <div class="card__top">
+              <div>
+                <div class="card__eyebrow">Upcoming visit</div>
+                <h2 class="card__title">Tuesday, April 14</h2>
+              </div>
+              <span class="status-pill status-pill--warm">Confirmed</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline__row">
+                <div class="timeline__time">9:45 AM</div>
+                <div class="timeline__line"></div>
+                <div class="timeline__content">Arrival window opens</div>
+              </div>
+              <div class="timeline__row">
+                <div class="timeline__time">10:00–12:00</div>
+                <div class="timeline__line"></div>
+                <div class="timeline__content">Cleaning team on-site</div>
+              </div>
+              <div class="timeline__row">
+                <div class="timeline__time">After visit</div>
+                <div class="timeline__line"></div>
+                <div class="timeline__content">Invoice sent + completion summary posted</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Recurring plan</div>
+            <h2 class="card__title">Biweekly schedule</h2>
+            <p class="card__text">
+              Your home is currently set for service every other Tuesday.
+            </p>
+            <div class="stack-actions">
+              <button class="btn btn--ghost btn--full" type="button">Pause plan</button>
+              <button class="btn btn--outline btn--full" type="button">Adjust frequency</button>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <div class="card__eyebrow">Past visits</div>
+            <h2 class="card__title">Recent history</h2>
+
+            <div class="visit-list">
+              <div class="visit-item">
+                <div>
+                  <div class="visit-item__title">March 30 • General Cleaning</div>
+                  <div class="visit-item__sub">Completed • 2 hr 35 min</div>
                 </div>
-                <div class="sms-number-wrap" id="smsNumberWrap" aria-hidden="true">
-                  <label class="form-group sms-number-field">
-                    <span class="form-label">Phone number for SMS</span>
-                    <input type="tel" class="form-input" id="smsPhoneNumber" placeholder="+1 (431) 555-0123" autocomplete="tel">
-                  </label>
-                  <button type="button" class="btn btn--primary btn--sm" id="smsSaveNumber">Save number</button>
+                <span class="status-pill status-pill--success">Completed</span>
+              </div>
+
+              <div class="visit-item">
+                <div>
+                  <div class="visit-item__title">March 16 • Deep Cleaning</div>
+                  <div class="visit-item__sub">Completed • 4 hr 10 min</div>
                 </div>
-              </li>
-              <li class="settings-item">
-                <span class="settings-item__label">Marketing and tips (optional)</span>
-                <label class="toggle" aria-label="Marketing emails">
-                  <input type="checkbox" class="toggle__input" id="toggleMarketing">
-                  <span class="toggle__track"></span>
-                  <span class="toggle__thumb"></span>
-                </label>
-              </li>
+                <span class="status-pill status-pill--success">Completed</span>
+              </div>
+
+              <div class="visit-item">
+                <div>
+                  <div class="visit-item__title">March 2 • General Cleaning</div>
+                  <div class="visit-item__sub">Completed • 2 hr 20 min</div>
+                </div>
+                <span class="status-pill status-pill--success">Completed</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="portal-panel" id="panel-home-profile" data-panel aria-hidden="true">
+        <div class="panel-grid">
+          <article class="card card--wide">
+            <div class="card__top">
+              <div>
+                <div class="card__eyebrow">Home profile</div>
+                <h2 class="card__title">Service notes your team sees</h2>
+              </div>
+              <button class="btn btn--ghost" type="button" id="editProfileBtn">Edit notes</button>
+            </div>
+
+            <div class="home-profile-grid">
+              <div class="profile-block">
+                <div class="profile-block__title">Entry instructions</div>
+                <p>Use side door keypad. Alarm is off during scheduled visits.</p>
+              </div>
+
+              <div class="profile-block">
+                <div class="profile-block__title">Pets</div>
+                <p>One small dog. Friendly but may bark when team first enters.</p>
+              </div>
+
+              <div class="profile-block">
+                <div class="profile-block__title">Product preferences</div>
+                <p>Fragrance-light products preferred. Avoid heavy lemon scent.</p>
+              </div>
+
+              <div class="profile-block">
+                <div class="profile-block__title">Priority areas</div>
+                <p>Kitchen counters, shower glass, baseboards near dining room.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Extras</div>
+            <h2 class="card__title">Most requested add-ons</h2>
+            <div class="addon-list">
+              <button class="addon-pill" type="button">Inside fridge</button>
+              <button class="addon-pill" type="button">Inside oven</button>
+              <button class="addon-pill" type="button">Linen change</button>
+              <button class="addon-pill" type="button">Interior windows</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Schedule note</div>
+            <h2 class="card__title">Best visit window</h2>
+            <p class="card__text">
+              Preferred on weekdays between 10 AM and 2 PM. Avoid early Mondays when possible.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="portal-panel" id="panel-billing" data-panel aria-hidden="true">
+        <div class="panel-grid">
+          <article class="card">
+            <div class="card__eyebrow">Payment method</div>
+            <h2 class="card__title">Card ending in 1842</h2>
+            <p class="card__text">
+              Billing runs after completion unless otherwise arranged.
+            </p>
+            <div class="stack-actions">
+              <button class="btn btn--ghost btn--full" type="button">Update card</button>
+              <button class="btn btn--outline btn--full" type="button">Billing help</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Next invoice</div>
+            <h2 class="card__title">$212.00 estimated</h2>
+            <p class="card__text">
+              Final amount may change if extras are added before service.
+            </p>
+          </article>
+
+          <article class="card card--wide">
+            <div class="card__eyebrow">Billing history</div>
+            <h2 class="card__title">Recent invoices</h2>
+
+            <div class="invoice-table">
+              <div class="invoice-row invoice-row--head">
+                <span>Date</span>
+                <span>Service</span>
+                <span>Total</span>
+                <span>Status</span>
+              </div>
+
+              <div class="invoice-row">
+                <span>Mar 30</span>
+                <span>General Cleaning</span>
+                <span>$168.00</span>
+                <span class="status-pill status-pill--success">Paid</span>
+              </div>
+
+              <div class="invoice-row">
+                <span>Mar 16</span>
+                <span>Deep Cleaning</span>
+                <span>$278.00</span>
+                <span class="status-pill status-pill--success">Paid</span>
+              </div>
+
+              <div class="invoice-row">
+                <span>Mar 02</span>
+                <span>General Cleaning</span>
+                <span>$168.00</span>
+                <span class="status-pill status-pill--success">Paid</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="portal-panel" id="panel-messages" data-panel aria-hidden="true">
+        <div class="panel-grid">
+          <article class="card card--wide">
+            <div class="card__eyebrow">Messages</div>
+            <h2 class="card__title">Chat with the team</h2>
+
+            <div class="message-thread" id="messageThread">
+              <div class="message message--them">
+                Hi Sarah — we’ve got your next deep cleaning confirmed for Tuesday.
+                Let us know if anything changed before arrival.
+              </div>
+
+              <div class="message message--me">
+                Please pay extra attention to the upstairs shower glass again.
+              </div>
+
+              <div class="message message--them">
+                Noted. We’ve added that to your team notes for this visit.
+              </div>
+            </div>
+
+            <form class="message-form" id="messageForm">
+              <input
+                class="message-form__input"
+                id="messageInput"
+                type="text"
+                placeholder="Type a message..."
+                autocomplete="off"
+              />
+              <button class="btn btn--solid" type="submit">Send</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Quick prompts</div>
+            <h2 class="card__title">Common requests</h2>
+            <div class="quick-prompts">
+              <button class="quick-prompt" type="button">Can we move the time window?</button>
+              <button class="quick-prompt" type="button">Please skip one room this visit.</button>
+              <button class="quick-prompt" type="button">Add inside fridge cleaning.</button>
+              <button class="quick-prompt" type="button">How much would a deeper clean cost?</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="portal-panel" id="panel-account" data-panel aria-hidden="true">
+        <div class="panel-grid">
+          <article class="card">
+            <div class="card__eyebrow">Profile</div>
+            <h2 class="card__title">Contact details</h2>
+            <ul class="detail-list">
+              <li><strong>Name:</strong> Sarah Mitchell</li>
+              <li><strong>Email:</strong> sarah@example.com</li>
+              <li><strong>Phone:</strong> (204) 555-3187</li>
             </ul>
-          </section>
+          </article>
+
+          <article class="card">
+            <div class="card__eyebrow">Notifications</div>
+            <h2 class="card__title">Preferences</h2>
+            <div class="toggle-list">
+              <label class="toggle-row">
+                <span>Email reminders</span>
+                <input type="checkbox" checked />
+              </label>
+              <label class="toggle-row">
+                <span>SMS arrival updates</span>
+                <input type="checkbox" checked />
+              </label>
+              <label class="toggle-row">
+                <span>Invoice emails</span>
+                <input type="checkbox" checked />
+              </label>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <div class="card__eyebrow">Account actions</div>
+            <h2 class="card__title">Manage your portal</h2>
+            <div class="account-actions">
+              <button class="btn btn--ghost" type="button">Change password</button>
+              <button class="btn btn--outline" type="button">Download invoices</button>
+              <button class="btn btn--danger" type="button">Log out</button>
+            </div>
+          </article>
         </div>
-
-        <!-- PAGE: Book Appointment (flow from Getting Started) -->
-        <div class="page-panel" id="panel-book" data-page="book" role="main" aria-hidden="true">
-          <div class="flow-nav">
-            <a href="#" class="flow-nav__back" id="bookBackToOverview">Back to Overview</a>
-          </div>
-          <section class="section-header">
-            <h2 class="section-title">Book Appointment</h2>
-            <p class="section-desc">Choose your service, add-ons, and preferred date for your cleaning.</p>
-          </section>
-
-          <section class="card booking-section">
-            <h3 class="booking-section__title">Service type</h3>
-            <div class="service-type-grid" id="serviceTypeGrid">
-              <label class="service-type-card">
-                <input type="radio" name="booking_service" value="deep" class="service-type-card__input" data-price="249">
-                <span class="service-type-card__box">
-                  <span class="service-type-card__name">Deep Cleaning</span>
-                  <span class="service-type-card__price">$249.00</span>
-                  <span class="service-type-card__desc">One-time thorough clean</span>
-                </span>
-              </label>
-              <label class="service-type-card">
-                <input type="radio" name="booking_service" value="maintenance" class="service-type-card__input" data-price="179">
-                <span class="service-type-card__box">
-                  <span class="service-type-card__name">Maintenance</span>
-                  <span class="service-type-card__price">$179.00</span>
-                  <span class="service-type-card__desc">Recurring plan</span>
-                </span>
-              </label>
-            </div>
-          </section>
-
-          <section class="card booking-section">
-            <h3 class="booking-section__title">Add-ons (optional)</h3>
-            <p class="booking-section__desc">Add these services to your appointment.</p>
-            <div class="addons-grid" id="bookingAddonsGrid">
-              <label class="addon-card" data-addon="laundry">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="45" data-name="Laundry & Fold">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Laundry & Fold</span>
-                  <span class="addon-card__price">+$45</span>
-                  <span class="addon-card__tag addon-card__tag--popular">Popular</span>
-                </span>
-              </label>
-              <label class="addon-card" data-addon="windows">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="35" data-name="Window & Tracks">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Window & Tracks</span>
-                  <span class="addon-card__price">+$35</span>
-                </span>
-              </label>
-              <label class="addon-card" data-addon="inside-fridge">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="40" data-name="Inside Fridge">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Inside Fridge</span>
-                  <span class="addon-card__price">+$40</span>
-                  <span class="addon-card__tag addon-card__tag--popular">Popular</span>
-                </span>
-              </label>
-              <label class="addon-card" data-addon="inside-oven">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="40" data-name="Inside Oven">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Inside Oven</span>
-                  <span class="addon-card__price">+$40</span>
-                </span>
-              </label>
-              <label class="addon-card" data-addon="inside-cabinets">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="55" data-name="Inside Cabinets">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Inside Cabinets</span>
-                  <span class="addon-card__price">+$55</span>
-                </span>
-              </label>
-              <label class="addon-card" data-addon="basement">
-                <input type="checkbox" class="addon-card__input" name="booking_addon" value="60" data-name="Finished Basement">
-                <span class="addon-card__box">
-                  <span class="addon-card__title">Finished Basement</span>
-                  <span class="addon-card__price">+$60</span>
-                </span>
-              </label>
-            </div>
-          </section>
-
-          <section class="card booking-section">
-            <h3 class="booking-section__title">Preferred date</h3>
-            <label class="form-group">
-              <span class="form-label">Date and time</span>
-              <input type="datetime-local" class="form-input" id="bookingDateTime" required>
-            </label>
-          </section>
-
-          <div class="booking-actions">
-            <p class="booking-total" id="bookingTotal">Select a service</p>
-            <button type="button" class="btn btn--primary" id="btnProceedToPayment">Proceed to Payment</button>
-          </div>
-        </div>
-
-        <!-- PAGE: Payment -->
-        <div class="page-panel" id="panel-payment" data-page="payment" role="main" aria-hidden="true">
-          <div class="flow-nav">
-            <a href="#" class="flow-nav__back" id="paymentBackToBook">Back to booking</a>
-          </div>
-          <section class="section-header payment-header">
-            <h2 class="section-title">Payment</h2>
-            <p class="section-desc">Complete your booking with a secure payment.</p>
-            <div class="payment-status-wrap">
-              <span class="payment-status-label">Transaction status</span>
-              <span class="status-badge status-badge--payment" id="paymentStatusBadge">Pending</span>
-            </div>
-          </section>
-
-          <div class="payment-layout">
-            <section class="card payment-summary-card" id="paymentSummaryCard">
-              <h3 class="payment-summary__title">Order summary</h3>
-              <dl class="payment-summary__list" id="paymentSummaryList">
-                <div class="payment-summary__row">
-                  <dt>Service</dt>
-                  <dd id="paymentSummaryService">—</dd>
-                </div>
-                <div class="payment-summary__row payment-summary__row--addons" id="paymentSummaryAddonsWrap">
-                  <dt>Add-ons</dt>
-                  <dd id="paymentSummaryAddons">None</dd>
-                </div>
-                <div class="payment-summary__row">
-                  <dt>Date</dt>
-                  <dd id="paymentSummaryDate">—</dd>
-                </div>
-                <div class="payment-summary__row payment-summary__row--total">
-                  <dt>Total</dt>
-                  <dd id="paymentSummaryTotal">$0.00</dd>
-                </div>
-              </dl>
-            </section>
-
-            <section class="card payment-form-card" id="paymentFormCard">
-              <h3 class="payment-form__title">Payment method</h3>
-              <form class="form payment-form" id="paymentForm" novalidate>
-                <label class="form-group">
-                  <span class="form-label">Card number</span>
-                  <input type="text" class="form-input" name="card_number" placeholder="4242 4242 4242 4242" maxlength="19" autocomplete="cc-number">
-                </label>
-                <div class="form-row">
-                  <label class="form-group">
-                    <span class="form-label">Expiry</span>
-                    <input type="text" class="form-input" name="expiry" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp">
-                  </label>
-                  <label class="form-group">
-                    <span class="form-label">CVV</span>
-                    <input type="text" class="form-input" name="cvv" placeholder="123" maxlength="4" autocomplete="cc-csc">
-                  </label>
-                </div>
-                <label class="form-group">
-                  <span class="form-label">Name on card</span>
-                  <input type="text" class="form-input" name="card_name" placeholder="Full name" autocomplete="cc-name">
-                </label>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn--primary" id="btnConfirmPayment">Confirm Payment</button>
-                </div>
-              </form>
-            </section>
-          </div>
-
-          <section class="card payment-success-card" id="paymentSuccessCard" aria-hidden="true">
-            <div class="payment-success__icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="payment-success__title">Payment completed</h3>
-            <p class="payment-success__text">Your booking is confirmed. We will send a reminder before your appointment.</p>
-            <a href="#" class="btn btn--primary" id="paymentBackToOverview">Back to Overview</a>
-          </section>
-        </div>
-      </main>
-    </div>
-
-    <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+      </section>
+    </main>
   </div>
 
-  <!-- Toast for feedback -->
-  <div class="toast" id="toast" role="status" aria-live="polite" aria-hidden="true"></div>
+  <div class="portal-modal" id="portalModal" aria-hidden="true">
+    <div class="portal-modal__backdrop" data-close-modal></div>
+
+    <div class="portal-modal__card" role="dialog" aria-modal="true" aria-labelledby="portalModalTitle">
+      <div class="portal-modal__top">
+        <div>
+          <div class="portal-modal__eyebrow">Request update</div>
+          <h2 class="portal-modal__title" id="portalModalTitle">Tell us what changed</h2>
+        </div>
+        <button class="portal-modal__close" type="button" data-close-modal aria-label="Close dialog">✕</button>
+      </div>
+
+      <form id="portalModalForm" class="portal-modal__form">
+        <label class="field">
+          <span>Type of request</span>
+          <select id="requestType">
+            <option>Reschedule visit</option>
+            <option>Update access note</option>
+            <option>Add an extra</option>
+            <option>Ask a question</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea id="requestMessage" rows="5" placeholder="Example: Please move my cleaning to Wednesday afternoon if possible."></textarea>
+        </label>
+
+        <div class="portal-modal__actions">
+          <button class="btn btn--ghost" type="button" data-close-modal>Cancel</button>
+          <button class="btn btn--solid" type="submit">Send request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="portal-toast" id="portalToast" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>

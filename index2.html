@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal | Scrub & Klean Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="client-portal2.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="sidebar-brand">
+        <span class="brand-logo-wrap">
+          <img src="logo.png" alt="Scrub & Klean Homes - Client Portal" class="brand-logo">
+        </span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item nav-item--active" data-page="overview" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          </span>
+          Overview
+        </a>
+        <a href="#" class="nav-item" data-page="add-ons">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+          Add-Ons
+        </a>
+        <a href="#" class="nav-item" data-page="emergency">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </span>
+          Emergency Cleaning
+        </a>
+        <a href="#" class="nav-item" data-page="history">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          History
+        </a>
+        <a href="#" class="nav-item" data-page="security">
+          <span class="nav-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          Security
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-item nav-item--logout">Logout</a>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="main-header">
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+        <h1 class="page-title" id="pageTitle">Overview</h1>
+        <div class="header-meta">
+          <span class="user-label">Logged in as <strong>Ebenezer Ayomide</strong></span>
+          <span class="badge badge--client">Client</span>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- PAGE: Overview -->
+        <div class="page-panel is-active" id="panel-overview" data-page="overview" role="main">
+          <section class="stats-grid" aria-label="Service summary">
+            <article class="stat-card stat-card--deep">
+              <h2 class="stat-card__title">Deep Cleaning</h2>
+              <p class="stat-card__value">$249.00</p>
+              <p class="stat-card__sub">Your custom price</p>
+            </article>
+            <article class="stat-card stat-card--maintenance">
+              <h2 class="stat-card__title">Maintenance</h2>
+              <p class="stat-card__value">$179.00</p>
+              <p class="stat-card__sub">Recurring plan</p>
+            </article>
+            <article class="stat-card stat-card--next">
+              <h2 class="stat-card__title">Next Cleaning</h2>
+              <p class="stat-card__value">Mar 22, 2026</p>
+              <p class="stat-card__sub">Scheduled date</p>
+            </article>
+          </section>
+
+          <section class="journey-section card">
+            <div class="journey-header">
+              <h2 class="journey-title">
+                <span class="journey-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                </span>
+                Your Journey
+              </h2>
+              <a href="#" class="btn btn--primary" id="ctaGettingStarted">Getting Started</a>
+            </div>
+            <ul class="journey-list" role="list">
+              <li class="journey-step journey-step--done">
+                <span class="journey-step__bullet" aria-hidden="true"></span>
+                <span class="journey-step__label">Free Home Assessment</span>
+                <span class="journey-step__check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </li>
+              <li class="journey-step journey-step--done">
+                <span class="journey-step__bullet" aria-hidden="true"></span>
+                <span class="journey-step__label">Quote Received</span>
+                <span class="journey-step__check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </li>
+              <li class="journey-step">
+                <span class="journey-step__bullet" aria-hidden="true"></span>
+                <span class="journey-step__label">Deep Cleaning Confirmed</span>
+                <span class="journey-step__check" aria-hidden="true"></span>
+              </li>
+              <li class="journey-step">
+                <span class="journey-step__bullet" aria-hidden="true"></span>
+                <span class="journey-step__label">Deep Cleaning Completed</span>
+                <span class="journey-step__check" aria-hidden="true"></span>
+              </li>
+              <li class="journey-step">
+                <span class="journey-step__bullet" aria-hidden="true"></span>
+                <span class="journey-step__label">Recurring Plan Active</span>
+                <span class="journey-step__check" aria-hidden="true"></span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="info-card card card--info" role="status">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </span>
+            <p>Our team will confirm your payment and schedule your deep cleaning. Add-ons and recurring maintenance unlock after your deep cleaning is complete.</p>
+          </section>
+        </div>
+
+        <!-- PAGE: Add-Ons -->
+        <div class="page-panel" id="panel-add-ons" data-page="add-ons" role="main" aria-hidden="true">
+          <section class="section-header">
+            <h2 class="section-title">Additional Services</h2>
+            <p class="section-desc">Enhance your cleaning with these add-ons. Select the services you want to include.</p>
+          </section>
+          <div class="addons-grid" id="addonsGrid">
+            <label class="addon-card" data-addon="laundry">
+              <input type="checkbox" class="addon-card__input" name="addon" value="laundry">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Laundry & Fold</span>
+                <span class="addon-card__price">+$45</span>
+                <span class="addon-card__tag addon-card__tag--popular">Popular</span>
+              </span>
+            </label>
+            <label class="addon-card" data-addon="windows">
+              <input type="checkbox" class="addon-card__input" name="addon" value="windows">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Window & Tracks</span>
+                <span class="addon-card__price">+$35</span>
+              </span>
+            </label>
+            <label class="addon-card" data-addon="inside-fridge">
+              <input type="checkbox" class="addon-card__input" name="addon" value="inside-fridge">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Inside Fridge</span>
+                <span class="addon-card__price">+$40</span>
+                <span class="addon-card__tag addon-card__tag--popular">Popular</span>
+              </span>
+            </label>
+            <label class="addon-card" data-addon="inside-oven">
+              <input type="checkbox" class="addon-card__input" name="addon" value="inside-oven">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Inside Oven</span>
+                <span class="addon-card__price">+$40</span>
+              </span>
+            </label>
+            <label class="addon-card" data-addon="inside-cabinets">
+              <input type="checkbox" class="addon-card__input" name="addon" value="inside-cabinets">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Inside Cabinets</span>
+                <span class="addon-card__price">+$55</span>
+              </span>
+            </label>
+            <label class="addon-card" data-addon="basement">
+              <input type="checkbox" class="addon-card__input" name="addon" value="basement">
+              <span class="addon-card__box">
+                <span class="addon-card__title">Finished Basement</span>
+                <span class="addon-card__price">+$60</span>
+              </span>
+            </label>
+          </div>
+          <div class="addons-actions">
+            <p class="addons-summary" id="addonsSummary">No add-ons selected</p>
+            <button type="button" class="btn btn--primary" id="addonsSave">Save Selection</button>
+          </div>
+        </div>
+
+        <!-- PAGE: Emergency Cleaning -->
+        <div class="page-panel" id="panel-emergency" data-page="emergency" role="main" aria-hidden="true">
+          <section class="emergency-hero card">
+            <div class="emergency-hero__content">
+              <h2 class="emergency-hero__title">24/7 Emergency Cleaning</h2>
+              <p class="emergency-hero__text">Need urgent cleaning? We respond within 2–4 hours. Available around the clock for spills, move-out rushes, or last-minute needs.</p>
+              <ul class="emergency-features">
+                <li><span class="emergency-features__dot"></span> Response within 2–4 hours</li>
+                <li><span class="emergency-features__dot"></span> Same-day scheduling when possible</li>
+                <li><span class="emergency-features__dot"></span> Transparent pricing before booking</li>
+              </ul>
+            </div>
+            <div class="emergency-hero__badge">
+              <span class="emergency-badge">24/7</span>
+              <span class="emergency-badge-label">Available</span>
+            </div>
+          </section>
+          <section class="card emergency-form-section">
+            <h2 class="section-title">Request Emergency Service</h2>
+            <form class="form emergency-form" id="emergencyForm" novalidate>
+              <div class="form-row">
+                <label class="form-group">
+                  <span class="form-label">Service type</span>
+                  <select class="form-input" name="service_type" required>
+                    <option value="">Select type</option>
+                    <option value="spill">Spill / Stain emergency</option>
+                    <option value="move">Move-out rush</option>
+                    <option value="guest">Guest / event prep</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+                <label class="form-group">
+                  <span class="form-label">Preferred date & time</span>
+                  <input type="datetime-local" class="form-input" name="preferred_datetime" required>
+                </label>
+              </div>
+              <label class="form-group">
+                <span class="form-label">Address (if different from account)</span>
+                <input type="text" class="form-input" name="address" placeholder="Same as account">
+              </label>
+              <label class="form-group">
+                <span class="form-label">Details</span>
+                <textarea class="form-input form-textarea" name="details" rows="4" placeholder="Describe what you need..."></textarea>
+              </label>
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary">Submit Request</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <!-- PAGE: History -->
+        <div class="page-panel" id="panel-history" data-page="history" role="main" aria-hidden="true">
+          <section class="section-header">
+            <h2 class="section-title">Service History</h2>
+            <p class="section-desc">Past and upcoming appointments.</p>
+          </section>
+          <div class="card card--table-wrap">
+            <div class="table-responsive">
+              <table class="data-table" id="historyTable">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Service</th>
+                    <th>Add-ons</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody id="historyTableBody">
+                  <!-- Rows rendered by script from transaction history -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <section class="card upcoming-card" id="upcomingCard">
+            <h2 class="section-title">Next Appointment</h2>
+            <div class="upcoming-detail" id="upcomingDetail">
+              <p class="upcoming-date" id="upcomingDate">—</p>
+              <p class="upcoming-service" id="upcomingService">—</p>
+              <div class="upcoming-actions">
+                <button type="button" class="btn btn--outline" id="btnReschedule">Reschedule</button>
+                <button type="button" class="btn btn--outline btn--danger" id="btnCancelAppointment">Cancel appointment</button>
+              </div>
+            </div>
+            <p class="upcoming-empty" id="upcomingEmpty" style="display: none;">No upcoming appointments.</p>
+          </section>
+        </div>
+
+        <!-- PAGE: Reschedule -->
+        <div class="page-panel" id="panel-reschedule" data-page="reschedule" role="main" aria-hidden="true">
+          <div class="flow-nav">
+            <a href="#" class="flow-nav__back" id="rescheduleBackToHistory">Back to History</a>
+          </div>
+          <section class="section-header">
+            <h2 class="section-title">Reschedule Appointment</h2>
+            <p class="section-desc">Choose a new date and time for your appointment.</p>
+          </section>
+          <div class="card reschedule-current" id="rescheduleCurrentSummary">
+            <h3 class="reschedule-current__title">Current appointment</h3>
+            <p class="reschedule-current__date" id="rescheduleCurrentDate">—</p>
+            <p class="reschedule-current__service" id="rescheduleCurrentService">—</p>
+          </div>
+          <section class="card">
+            <label class="form-group">
+              <span class="form-label">New date and time</span>
+              <input type="datetime-local" class="form-input" id="rescheduleNewDateTime" required>
+            </label>
+            <div class="reschedule-actions">
+              <button type="button" class="btn btn--primary" id="btnConfirmReschedule">Confirm reschedule</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- PAGE: Security -->
+        <div class="page-panel" id="panel-security" data-page="security" role="main" aria-hidden="true">
+          <section class="section-header">
+            <h2 class="section-title">Account Security</h2>
+            <p class="section-desc">Manage password, two-factor authentication, and notifications.</p>
+          </section>
+
+          <section class="card security-block">
+            <h3 class="security-block__title">Password</h3>
+            <p class="security-block__desc">Change your password regularly to keep your account secure.</p>
+            <button type="button" class="btn btn--primary" id="btnChangePassword">Change Password</button>
+          </section>
+
+          <section class="card security-block security-block--2fa" id="security2faBlock">
+            <div class="security-block__row">
+              <div>
+                <h3 class="security-block__title">Two-Factor Authentication (2FA)</h3>
+                <p class="security-block__desc">Connect with Google Authenticator for an extra layer of security.</p>
+              </div>
+              <label class="toggle" aria-label="Enable two-factor authentication">
+                <input type="checkbox" class="toggle__input" id="toggle2fa">
+                <span class="toggle__track"></span>
+                <span class="toggle__thumb"></span>
+              </label>
+            </div>
+            <div class="twofa-setup" id="twofaSetup" aria-hidden="true">
+              <p class="twofa-setup__intro">Add this account to Google Authenticator using one of the methods below.</p>
+              <div class="twofa-methods">
+                <div class="twofa-method twofa-method--scan">
+                  <h4 class="twofa-method__title">Scan barcode</h4>
+                  <p class="twofa-method__desc">Open Google Authenticator and scan this QR code.</p>
+                  <div class="twofa-qr-wrap">
+                    <img id="twofaQrImage" src="" alt="QR code for Google Authenticator" class="twofa-qr" width="200" height="200">
+                  </div>
+                </div>
+                <div class="twofa-method twofa-method--key">
+                  <h4 class="twofa-method__title">Enter key manually</h4>
+                  <p class="twofa-method__desc">Can’t scan? Enter this key in Google Authenticator.</p>
+                  <div class="twofa-secret-wrap">
+                    <code class="twofa-secret" id="twofaSecretKey">———— ———— ————</code>
+                    <button type="button" class="btn btn--outline btn--sm" id="twofaCopyKey">Copy key</button>
+                  </div>
+                </div>
+              </div>
+              <div class="twofa-verify">
+                <label class="form-group">
+                  <span class="form-label">Enter the 6-digit code from Google Authenticator</span>
+                  <input type="text" class="form-input twofa-code-input" id="twofaVerifyCode" placeholder="000000" maxlength="6" pattern="[0-9]*" inputmode="numeric" autocomplete="one-time-code">
+                </label>
+                <button type="button" class="btn btn--primary" id="twofaVerifyBtn">Verify and enable 2FA</button>
+              </div>
+            </div>
+            <div class="twofa-enabled" id="twofaEnabled" aria-hidden="true">
+              <p class="twofa-enabled__text">Two-factor authentication is enabled. Your account is protected with Google Authenticator.</p>
+            </div>
+          </section>
+
+          <section class="card security-block">
+            <h3 class="security-block__title">Login Activity</h3>
+            <p class="security-block__desc">Recent sign-ins to your account.</p>
+            <ul class="activity-list" id="activityList">
+              <li class="activity-item">
+                <span class="activity-item__device">Chrome on Windows</span>
+                <span class="activity-item__meta">Winnipeg, MB · Mar 14, 2026</span>
+                <span class="activity-item__current">Current session</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-item__device">Safari on iPhone</span>
+                <span class="activity-item__meta">Winnipeg, MB · Mar 12, 2026</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card security-block">
+            <h3 class="security-block__title">Notification Preferences</h3>
+            <p class="security-block__desc">Choose how you want to be notified about your bookings.</p>
+            <ul class="settings-list">
+              <li class="settings-item">
+                <span class="settings-item__label">Email for automatic booking notifications</span>
+                <label class="toggle" aria-label="Email booking notifications">
+                  <input type="checkbox" class="toggle__input" id="toggleEmail" checked>
+                  <span class="toggle__track"></span>
+                  <span class="toggle__thumb"></span>
+                </label>
+              </li>
+              <li class="settings-item settings-item--sms">
+                <div class="settings-item__main">
+                  <span class="settings-item__label">SMS for booking reminders</span>
+                  <label class="toggle" aria-label="SMS booking reminders">
+                    <input type="checkbox" class="toggle__input" id="toggleSms">
+                    <span class="toggle__track"></span>
+                    <span class="toggle__thumb"></span>
+                  </label>
+                </div>
+                <div class="sms-number-wrap" id="smsNumberWrap" aria-hidden="true">
+                  <label class="form-group sms-number-field">
+                    <span class="form-label">Phone number for SMS</span>
+                    <input type="tel" class="form-input" id="smsPhoneNumber" placeholder="+1 (431) 555-0123" autocomplete="tel">
+                  </label>
+                  <button type="button" class="btn btn--primary btn--sm" id="smsSaveNumber">Save number</button>
+                </div>
+              </li>
+              <li class="settings-item">
+                <span class="settings-item__label">Marketing and tips (optional)</span>
+                <label class="toggle" aria-label="Marketing emails">
+                  <input type="checkbox" class="toggle__input" id="toggleMarketing">
+                  <span class="toggle__track"></span>
+                  <span class="toggle__thumb"></span>
+                </label>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- PAGE: Book Appointment (flow from Getting Started) -->
+        <div class="page-panel" id="panel-book" data-page="book" role="main" aria-hidden="true">
+          <div class="flow-nav">
+            <a href="#" class="flow-nav__back" id="bookBackToOverview">Back to Overview</a>
+          </div>
+          <section class="section-header">
+            <h2 class="section-title">Book Appointment</h2>
+            <p class="section-desc">Choose your service, add-ons, and preferred date for your cleaning.</p>
+          </section>
+
+          <section class="card booking-section">
+            <h3 class="booking-section__title">Service type</h3>
+            <div class="service-type-grid" id="serviceTypeGrid">
+              <label class="service-type-card">
+                <input type="radio" name="booking_service" value="deep" class="service-type-card__input" data-price="249">
+                <span class="service-type-card__box">
+                  <span class="service-type-card__name">Deep Cleaning</span>
+                  <span class="service-type-card__price">$249.00</span>
+                  <span class="service-type-card__desc">One-time thorough clean</span>
+                </span>
+              </label>
+              <label class="service-type-card">
+                <input type="radio" name="booking_service" value="maintenance" class="service-type-card__input" data-price="179">
+                <span class="service-type-card__box">
+                  <span class="service-type-card__name">Maintenance</span>
+                  <span class="service-type-card__price">$179.00</span>
+                  <span class="service-type-card__desc">Recurring plan</span>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="card booking-section">
+            <h3 class="booking-section__title">Add-ons (optional)</h3>
+            <p class="booking-section__desc">Add these services to your appointment.</p>
+            <div class="addons-grid" id="bookingAddonsGrid">
+              <label class="addon-card" data-addon="laundry">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="45" data-name="Laundry & Fold">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Laundry & Fold</span>
+                  <span class="addon-card__price">+$45</span>
+                  <span class="addon-card__tag addon-card__tag--popular">Popular</span>
+                </span>
+              </label>
+              <label class="addon-card" data-addon="windows">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="35" data-name="Window & Tracks">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Window & Tracks</span>
+                  <span class="addon-card__price">+$35</span>
+                </span>
+              </label>
+              <label class="addon-card" data-addon="inside-fridge">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="40" data-name="Inside Fridge">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Inside Fridge</span>
+                  <span class="addon-card__price">+$40</span>
+                  <span class="addon-card__tag addon-card__tag--popular">Popular</span>
+                </span>
+              </label>
+              <label class="addon-card" data-addon="inside-oven">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="40" data-name="Inside Oven">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Inside Oven</span>
+                  <span class="addon-card__price">+$40</span>
+                </span>
+              </label>
+              <label class="addon-card" data-addon="inside-cabinets">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="55" data-name="Inside Cabinets">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Inside Cabinets</span>
+                  <span class="addon-card__price">+$55</span>
+                </span>
+              </label>
+              <label class="addon-card" data-addon="basement">
+                <input type="checkbox" class="addon-card__input" name="booking_addon" value="60" data-name="Finished Basement">
+                <span class="addon-card__box">
+                  <span class="addon-card__title">Finished Basement</span>
+                  <span class="addon-card__price">+$60</span>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="card booking-section">
+            <h3 class="booking-section__title">Preferred date</h3>
+            <label class="form-group">
+              <span class="form-label">Date and time</span>
+              <input type="datetime-local" class="form-input" id="bookingDateTime" required>
+            </label>
+          </section>
+
+          <div class="booking-actions">
+            <p class="booking-total" id="bookingTotal">Select a service</p>
+            <button type="button" class="btn btn--primary" id="btnProceedToPayment">Proceed to Payment</button>
+          </div>
+        </div>
+
+        <!-- PAGE: Payment -->
+        <div class="page-panel" id="panel-payment" data-page="payment" role="main" aria-hidden="true">
+          <div class="flow-nav">
+            <a href="#" class="flow-nav__back" id="paymentBackToBook">Back to booking</a>
+          </div>
+          <section class="section-header payment-header">
+            <h2 class="section-title">Payment</h2>
+            <p class="section-desc">Complete your booking with a secure payment.</p>
+            <div class="payment-status-wrap">
+              <span class="payment-status-label">Transaction status</span>
+              <span class="status-badge status-badge--payment" id="paymentStatusBadge">Pending</span>
+            </div>
+          </section>
+
+          <div class="payment-layout">
+            <section class="card payment-summary-card" id="paymentSummaryCard">
+              <h3 class="payment-summary__title">Order summary</h3>
+              <dl class="payment-summary__list" id="paymentSummaryList">
+                <div class="payment-summary__row">
+                  <dt>Service</dt>
+                  <dd id="paymentSummaryService">—</dd>
+                </div>
+                <div class="payment-summary__row payment-summary__row--addons" id="paymentSummaryAddonsWrap">
+                  <dt>Add-ons</dt>
+                  <dd id="paymentSummaryAddons">None</dd>
+                </div>
+                <div class="payment-summary__row">
+                  <dt>Date</dt>
+                  <dd id="paymentSummaryDate">—</dd>
+                </div>
+                <div class="payment-summary__row payment-summary__row--total">
+                  <dt>Total</dt>
+                  <dd id="paymentSummaryTotal">$0.00</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="card payment-form-card" id="paymentFormCard">
+              <h3 class="payment-form__title">Payment method</h3>
+              <form class="form payment-form" id="paymentForm" novalidate>
+                <label class="form-group">
+                  <span class="form-label">Card number</span>
+                  <input type="text" class="form-input" name="card_number" placeholder="4242 4242 4242 4242" maxlength="19" autocomplete="cc-number">
+                </label>
+                <div class="form-row">
+                  <label class="form-group">
+                    <span class="form-label">Expiry</span>
+                    <input type="text" class="form-input" name="expiry" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp">
+                  </label>
+                  <label class="form-group">
+                    <span class="form-label">CVV</span>
+                    <input type="text" class="form-input" name="cvv" placeholder="123" maxlength="4" autocomplete="cc-csc">
+                  </label>
+                </div>
+                <label class="form-group">
+                  <span class="form-label">Name on card</span>
+                  <input type="text" class="form-input" name="card_name" placeholder="Full name" autocomplete="cc-name">
+                </label>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn--primary" id="btnConfirmPayment">Confirm Payment</button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <section class="card payment-success-card" id="paymentSuccessCard" aria-hidden="true">
+            <div class="payment-success__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="payment-success__title">Payment completed</h3>
+            <p class="payment-success__text">Your booking is confirmed. We will send a reminder before your appointment.</p>
+            <a href="#" class="btn btn--primary" id="paymentBackToOverview">Back to Overview</a>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+  </div>
+
+  <!-- Toast for feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
